@@ -116,4 +116,6 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    implementation("me.zalo:sdk-auth:4.24.1101")
 }

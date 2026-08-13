@@ -11,6 +11,10 @@
       android:theme="@style/AppTheme"
       android:usesCleartextTraffic="${usesCleartextTraffic}"
       android:supportsRtl="true">
+      <meta-data
+        android:name="com.zing.zalo.zalosdk.appID"
+        android:value="@string/appID" />
+
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
@@ -23,5 +27,20 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+
+      <activity
+        android:name="com.zing.zalo.zalosdk.oauth.BrowserLoginActivity" 
+        android:exported="true">
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="zalo-1727743654588317964" />
+        </intent-filter>
+      </activity>
     </application>
+
+    <queries>
+        <package android:name="com.zing.zalo" />
+    </queries>
 </manifest>
