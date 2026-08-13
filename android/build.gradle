@@ -46,6 +46,15 @@ android {
   }
 }
 
+repositories {
+    maven {
+        url "https://gitlab.com/api/v4/projects/50747855/packages/maven"
+    }
+}
+
 dependencies {
   implementation "com.facebook.react:react-android"
+  implementation "me.zalo:sdk-core:4.24.1101"
+  implementation "me.zalo:sdk-auth:4.24.1101"
+  implementation "me.zalo:sdk-openapi:4.24.1101"
 }
