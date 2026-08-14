@@ -1,5 +1,9 @@
 #import "Zalo.h"
+#if __has_include(<Zalo/Zalo-Swift.h>)
+#import <Zalo/Zalo-Swift.h>
+#else
 #import "Zalo-Swift.h"
+#endif
 
 @implementation Zalo {
   ZaloBridge *_bridge;
